@@ -9,7 +9,7 @@ import styled from "styled-components";
   
 */
 
-const Container = styled.div`
+const Header = styled.header`
   width: 100%;
   height: 80px;
   position: fixed;
@@ -52,31 +52,37 @@ const Button = styled.input`
   margin-left: 50px;
 `;
 
-export default () => (
-  <Container>
+const Navigation = () => (
+  <Header>
     <ImageContainer>
+      <Slink href="/">
       <Image src="/images/main_header.jpg" />
+      </Slink>
     </ImageContainer>
     <List>
       <Item>
-        <Slink href="/">사무실 찾기</Slink>
+        <Slink href="/SearchOffice">사무실 찾기</Slink>
       </Item>
       <Item>
-        <Slink href="/">사무실 내놓기</Slink>
+        <Slink href="/RegistOffice">사무실 내놓기</Slink>
       </Item>
       <Item>
-        <Slink href="/">프리패스</Slink>
+        <Slink href="/FreePass">프리패스</Slink>
       </Item>
       <Item>
         <Slink href="/">관심매물</Slink>
       </Item>
       <Item>
-        <Slink href="/">알림</Slink>
+        <Slink href="/Notification">알림</Slink>
       </Item>
       <Item>
-        <Slink href="/">채팅</Slink>
+        <Slink href="/Chatting">채팅</Slink>
       </Item>
-      <Button type="button" value="로그인 / 회원가입" />
+      <Slink href="/Login">
+        <Button type="button" value="로그인 / 회원가입" />
+      </Slink>
     </List>
-  </Container>
+  </Header>
 )
+
+export default Navigation;

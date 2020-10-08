@@ -1,14 +1,12 @@
-import GlobalStyles from "../src/components/GlobalStyles"
-import Navigation from "../src/components/Navigation"
+import GlobalStyles from "../src/components/GlobalStyles";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Navigation />
       <Component {...pageProps} />
       <GlobalStyles />
     </>
   )
 }
 
-export default MyApp
+export default MyApp;
